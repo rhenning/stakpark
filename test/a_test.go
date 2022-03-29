@@ -19,6 +19,6 @@ func TestTerraform(t *testing.T) {
 	tfOutVPC := terraform.OutputRequired(t, tfOpts, "vpc")
 	t.Logf("=====%#v\n", tfOutVPC)
 
-	tfOutZone := terraform.OutputRequired(t, tfOpts, "zone")
-	t.Logf("=====%#v\n", tfOutZone)
+	//tfOutZone := terraform.OutputRequired(t, tfOpts, "zone")
+	//t.Logf("=====%#v\n", tfOutZone)
 }

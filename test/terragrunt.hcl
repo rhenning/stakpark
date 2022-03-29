@@ -31,7 +31,7 @@ generate "providers" {
 #  path      = ".terraform-version"
 #  if_exists = "overwrite_terragrunt"
 #
-#  contents = <<EOF
-#${local.terraform_version}
-#EOF
+#  contents = <<-EOF
+#  ${local.terraform_version}
+#  EOF
 #}
