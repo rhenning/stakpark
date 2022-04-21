@@ -3,12 +3,14 @@
 
 locals {
   terraform_version   = "1.1.7"
-  aws_region          = "us-east-1"
+  aws_region          = "us-west-2"
   localstack_endpoint = "http://localhost:4566"
 
   localstack_services = [
     "acm",
     "ec2",
+    "elbv2",
+    "globalaccelerator",
     "route53",
     "s3",
     "sts",

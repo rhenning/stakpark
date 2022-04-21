@@ -3,6 +3,7 @@ brew "poetry"
 brew "tfenv"
 brew "go"
 brew "golangci-lint"
+brew "kind"
 brew "tilt"
 
 tap "warrensbox/tap"
