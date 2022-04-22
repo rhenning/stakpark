@@ -20,8 +20,8 @@ adjustments if you're not crazy about something there. that said...
 
 ```bash
 : install dependencies
-
 make dep
+
 : start localstack
 make up
 
