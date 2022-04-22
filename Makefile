@@ -6,7 +6,7 @@ DEEPCLEAN = .terragrunt-cache .terraform __pycache__
 TERRATEST_BASE_DIR = test
 TERRATEST_ENVS_DIR = $(TERRATEST_BASE_DIR)/envs
 TERRATEST_ENV_NAME = _example
-GOTEST_FLAGS = -v -timeout 5m
+GOTEST_FLAGS = -v -timeout 15m
 GOLANGCI_LINT = golangci-lint
 
 # literal space hack

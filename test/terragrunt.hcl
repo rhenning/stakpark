@@ -10,7 +10,6 @@ locals {
     "acm",
     "ec2",
     "elbv2",
-    "globalaccelerator",
     "route53",
     "s3",
     "sts",

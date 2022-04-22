@@ -56,3 +56,8 @@ desired to create your own environment. `a_test.go` and `Makefile`
 contain references to `_example`, so be sure to update those.
 
 have fun.
+
+## faq
+
+Q: __i have purchased a localstack pro license. how can i use it?__
+A: `make up LOCALSTACK_API_KEY="t0ps3<r37"`

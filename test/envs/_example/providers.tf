@@ -12,7 +12,6 @@ provider "aws" {
         acm = "http://localhost:4566"
         ec2 = "http://localhost:4566"
         elbv2 = "http://localhost:4566"
-        globalaccelerator = "http://localhost:4566"
         route53 = "http://localhost:4566"
         s3 = "http://localhost:4566"
         sts = "http://localhost:4566"
