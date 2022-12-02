@@ -31,3 +31,6 @@ override.tf.json
 .vscode
 
 .venv
+
+# Terragrunt files
+.terragrunt-cache

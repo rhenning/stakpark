@@ -2,7 +2,7 @@
 ## for invividual environment overrides, please see envs/<name>/terragrunt.hcl.
 
 locals {
-  terraform_version   = "1.1.7"
+  terraform_version   = "1.2.9"
   aws_region          = "us-west-2"
   localstack_endpoint = "http://localhost:4566"
 
@@ -28,11 +28,12 @@ generate "providers" {
   })
 }
 
-#generate "terraform_version" {
-#  path      = ".terraform-version"
-#  if_exists = "overwrite_terragrunt"
-#
-#  contents = <<-EOF
-#  ${local.terraform_version}
-#  EOF
-#}
+generate "terraform_version" {
+ path      = ".terraform-version"
+ if_exists = "overwrite"
+ disable_signature = true
+
+ contents = <<-EOF
+ ${local.terraform_version}
+ EOF
+}
