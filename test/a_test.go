@@ -17,6 +17,7 @@ type VPCOutput struct {
 func TestTerraform(t *testing.T) {
 	tfOpts := terraform.WithDefaultRetryableErrors(t, &terraform.Options{
 		TerraformDir: "./envs/_example/",
+		TerraformBinary: "terragrunt",
 	})
 
 	terraform.Init(t, tfOpts)

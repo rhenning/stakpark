@@ -3,8 +3,15 @@
 `stakpark` is an opinionated, clone-and-go environment template for local cloud
 infrastructure development on macs. package management is handled by homebrew,
 container runtime by docker, compose, and kind, and it includes other odds and
-ends like localstack, golang, and terraform, tfenv, terragrunt, tgswitch, and
+ends like [localstack]("https://localstack.cloud"), golang, and terraform, tfenv, terragrunt, tgswitch, and
 terratest.
+
+<img style="width:300px" src="https://raw.githubusercontent.com/localstack/.github/main/assets/localstack-readme-banner.svg" />
+<img style="width:300px" src="https://camo.githubusercontent.com/2b507540e2681c1a25698f246b9dca69c30548ed66a7323075b0224cbb1bf058/68747470733a2f2f676f6c616e672e6f72672f646f632f676f706865722f6669766579656172732e6a7067" />
+<img style="width:300px" src="https://camo.githubusercontent.com/1a4ed08978379480a9b1ca95d7f4cc8eb80b45ad47c056a7cfb5c597e9315ae5/68747470733a2f2f7777772e6461746f636d732d6173736574732e636f6d2f323838352f313632393934313234322d6c6f676f2d7465727261666f726d2d6d61696e2e737667" />
+
+*Gopher image by [Renee French][rf], licensed under [Creative Commons 4.0 Attributions license][cc4-by].*
+
 
 ## motivation
 
@@ -62,3 +69,6 @@ have fun.
 
 Q: __i have purchased a localstack pro license. how can i use it?__
 A: `make up LOCALSTACK_API_KEY="t0ps3<r37"`
+
+[rf]: https://reneefrench.blogspot.com/
+[cc4-by]: https://creativecommons.org/licenses/by/4.0/

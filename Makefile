@@ -2,7 +2,7 @@ PYPACKAGER = poetry
 AWSCLI = awslocal
 TERRAGRUNT = terragrunt
 TGSWITCH = tgswitch
-DEEPCLEAN = .terragrunt-cache .terraform __pycache__
+DEEPCLEAN = .terragrunt-cache .terraform __pycache__ .terraform.lock.hcl
 TERRATEST_BASE_DIR = test
 TERRATEST_ENVS_DIR = $(TERRATEST_BASE_DIR)/envs
 TERRATEST_ENV_NAME = _example
@@ -47,6 +47,7 @@ dep:
 	@$(call log-wait,installing base dependency collection...)
 	brew bundle --file Brewfile
 	@$(call log-wait,setting up python dependencies)
+	virtualenv .venv
 	$(PYPACKAGER) install
 	@$(call log-info,switching terragrunt version. restart your shell if this fails.)
 	$(TGSWITCH)
@@ -87,13 +88,13 @@ tfplan:
 	cd $(TERRATEST_ENVS_DIR)/$(TERRATEST_ENV_NAME) && $(TERRAGRUNT) plan
 	@$(call log-ok,$@)
 
-tfapply: 
+tfapply:
 	@$(call log-target,$@)
 	@$(call log-wait,applying terraform...)
 	cd $(TERRATEST_ENVS_DIR)/$(TERRATEST_ENV_NAME) && $(TERRAGRUNT) apply
 	@$(call log-ok,$@)
 
-tfdestroy: 
+tfdestroy:
 	@$(call log-target,$@)
 	@$(call log-wait,destroying terraform...)
 	cd $(TERRATEST_ENVS_DIR)/$(TERRATEST_ENV_NAME) && $(TERRAGRUNT) destroy

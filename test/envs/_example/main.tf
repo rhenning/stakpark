@@ -1,3 +1,13 @@
+terraform {
+  required_providers {
+    aws = {
+      # Pinned due to https://github.com/localstack/localstack/issues/7046
+      version = "4.34.0"
+      source  = "hashicorp/aws"
+    }
+  }
+}
+
 data "aws_region" "current" {}
 
 resource "random_pet" "this" {}
